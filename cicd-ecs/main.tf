@@ -7,6 +7,9 @@ provider "aws" {
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
 
+resource "aws_ecs_cluster" "my_cluster" {
+  name = "my-ecs-cluster"
+}
 
 resource "aws_iam_role" "ecs_task_execution_role" {
   name = "ecsTaskExecutionRole"
