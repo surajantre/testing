@@ -18,7 +18,7 @@ resource "aws_ecs_task_definition" "my_task" {
   cpu                      = "256"
   memory                   = "512"
 
-  # ✅ Reference existing manually created role
+  # ✅ Use existing IAM role (manually created)
   execution_role_arn = "arn:aws:iam::072152842782:role/ecsTaskExecutionRole"
 
   container_definitions = jsonencode([{
